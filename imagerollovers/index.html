@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 5, Part 3 - Image Rollovers</title>
+<script>
+    //02: Helper function to retrieve the ID of each image
+
+        function getImage(id) {
+            document.getElementById(id);
+        }
+
+    //03: Rollover function that performs the rollover effect on each image
+        //04: Create a copy of this function and store it in a variable
+
+        function Rollover(imageID, newImageURL) {
+            var target = this;
+        }
+
+    //05: Create 3 new properties including newImageURL, image, and oldImageURL
+        //06: Store the new image URL in a property
+        //07: Store the old image's ID in a property
+        //08: Store the old image URL in a property
+
+//            this = newImageURL;
+//            this = imageID;
+//            this = oldImageURL;
+        
+
+    //09, 10, 11: Attach onmouseover and onmouseout event handlers to target.image property
+//            target.image.onmouseover = function() {
+//                Rollover();
+//
+//            }
+//            target.image.onmouseout = function() {
+//                getImage();         
+//            }        
+    //12, 13: Event handler to create 5 new Rollover objects once the page loads
+        var links = document.getElementsByTagName("a");
+        var i, link, image;
+        for (i = 0; i < links.length; i++) {
+            link = items[i];
+            image = new Image();
+            image.src = link.href;
+        }
+
+        function fail() {
+            window.alert("Didn't take time to get help so didn't finish. 0 points.");
+        }
+
+     document.addEventListener("DOMContentLoaded", fail, false);
+
+</script>
+    
+    <style>
+
+        main {
+            margin: 0 auto;
+            width: 960px;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        img {
+            margin: 0 10px;
+        }
+        img:first-of-type {
+            margin-left: 15px;
+        }
+        ul#menu_rollovers li {
+            display: inline;
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <h3>JavaScript Image Rollovers (20 points)</h3>
+            <p>In this part of the assignment you will practice working with the DOM, DOM Events, Functions, and more to create an application that features a navigation bar with rollover images. To complete this part, follow the steps outlined below:</p>
+            <ul>
+                <li>Notice the 5 images in the web page. These are the 5 images that you will be creating rollovers for. Notice that for each image, an “over” state exists for it in the same directory. Begin by creating a unique ID for each image so that you have image1, image2, image3, image4, and image5.</li>
+                <li>Now, within the script tag of your web page, create a helper function called getImage(). This function will accept one parameter. Within the function, return the result of getting an element by its ID, passing in the function’s argument as a parameter into the getElementById() method.</li>
+                <li>Create a new constructor function called Rollover that accepts two arguments including imageId and newImageURL.</li>
+                <li>Create a new object variable called target and store this within it.</li>
+                <li>Create 3 properties associated with target including newImageURL, image, and oldImageURL.</li>
+                <li>Store the value of the newImageURL parameter within the newImageURL property.</li>
+                <li>Store the return value of the getImage() function, passing in the imageID argument as a parameter within the image property.</li>
+                <li>Store this.image.src (the URL or source of the image you’re working with) within the oldImageURL property.</li>
+                <li>Create an event handler for onmouseover and one for onmouseout for each target image, or: 
+                    target.image.onmouseover = function() {
+
+                     }
+                    target.image.onmouseout = function() {
+                    </li>
+                }
+                <li>In the mouseover, set the src property of the target.image to the newImageURL property.</li>
+                <li>In the mouseout, set the src property of the target.image to the oldImageURL property.</li>
+                <li>Create an event handler to handle the loading of the web page (window). </li>
+                <li>Within the event handler function, create 5 new instances of the Rollover object, passing in the image’s ID and the rollover image path for each image as parameters within the constructor.</li>
+            </ul>
+	<!-- 01 -->
+        <ul id="menu_rollovers">
+            <li><a href="home_over.png">
+                <img id="image1" src="home.png"></a></li>
+            <li><a href="aboutus_over.png">
+                <img id="image2" src="aboutus.png"></a></li>
+            <li><a href="solutions.png">
+                <img id="image3" src="solutions.png"></a></li>
+            <li><a href="support_over.png">
+                <img id="image4" src="support.png"></a></li>
+            <li><a href="contactus_over.png">
+                <img id="image5" src="contactus.png"></a></li>
+        </ul>
+        
+        <p><a href="../index.html" target="_blank">link to applications</a></p>
+        <p><a href="../calculator/index.html" target="_blank">link to calculator</a></p>
+        
+    
+    </main>
+</body>
+</html>
